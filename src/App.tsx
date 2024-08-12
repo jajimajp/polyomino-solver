@@ -2,6 +2,8 @@ import { useState } from 'react'
 import * as Color from './lib/color'
 import * as Model from './lib/model'
 
+import GitHubLogo from './assets/github-mark-white.svg'
+
 const uniqueGradId = (() => {
   let id = 0
   return () => `grad-App-${id++}`
@@ -103,6 +105,20 @@ function App() {
       >
         Polyomino Solver
       </h1>
+      <a
+        href="https://github.com/jajimajp/polyomino-solver"
+        title="View on GitHub"
+        style={{
+          position: 'absolute',
+          right: 5,
+          top: 5,
+          display: 'flex',
+          alignItems: 'center',
+          gap: 8,
+        }}
+      >
+        <img src={GitHubLogo} alt="GitHub" style={{ width: 36, height: 36 }} />
+      </a>
       <div style={{ display: 'flex', position: 'relative', width: 600 }}>
         <button
           type="button"
